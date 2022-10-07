@@ -1,0 +1,134 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: #F5225C;
+    color: white;
+    height: 200px;
+    margin:-20px;
+    
+}
+header img{
+    max-width: 200px;
+    float: left;
+}
+header li{
+    display: inline-block;
+    padding: 70px 3rem;
+    font-size: 2em;
+
+}
+header a:hover {
+    background-color: #16F4B2;
+    text-decoration:none;
+    color: black;
+    }
+header ul{
+    text-align: center;
+    list-style-type: none;
+}
+.container ul{
+    text-decoration: none;
+
+}
+.container li{
+    display: inline-block;
+    padding: 0 3rem;
+    text-align: center;
+    margin: auto;
+}
+.container h2{
+    margin: 30px;
+}
+.container img{
+    height: 150px;
+    width: 150px;
+}
+.container input{
+    background-color: #F5225C;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.5em;
+}
+.container input:hover {
+    background-color: #16F4B2;
+    text-decoration:none;
+    color: black;
+    }
+.container p{
+    font-size: 2em;
+}
+footer{
+    background-color: #f5225c;
+    height: 200px;
+    padding: 3em 70px;
+    margin:20px
+}
+footer ul{
+    text-decoration: none;
+}
+footer li{
+    display: inline-block;
+    color: white;
+    padding: 3em;
+    font-size: 1.5em;
+}
+footer img{
+    max-width: 200px;
+    float: left;
+}
+footer a:hover {
+    background-color: #16F4B2;
+    text-decoration:none;
+    color: black;
+    }
+
+header a:visited{
+    text-decoration: none;
+    color: white;
+  }
+.center{
+    align-items: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+
+}
+.center input{
+    margin: 1em;
+}
+select {
+    font-size: 1.3rem;
+    margin: 3em;
+align-items: center;
+}
+.carouselExampleIndicators img{
+    max-width: 600px;
+}
+.align{
+    display: inline-block;
+}
+.login-form {
+    width: 340px;
+    margin: 50px auto;
+    border-radius : 56;
+}
+.login-form form {
+    margin-bottom: 15px;
+    background: #f5225c;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    border-radius: 20px;
+}
+.login-form h2 {
+    margin: 0 0 15px;
+}
+.form-control, .btn {
+    min-height: 38px;
+    border-radius: 10px;
+}
+.btn {        
+    font-size: 15px;
+    font-weight: bold;
+}
