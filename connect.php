@@ -28,8 +28,8 @@
                 if(password_verify($password, $data['password']))
                 {
                     // On créer la session et on redirige sur landing.php
-                    $_SESSION['user'] = $data['token'];
-                    header('Location: landing.php');
+                    $_SESSION['user'];
+                    header('Location: utilisateur.php');
                     die();
                 }else{ header('Location: connexion.php?login_err=password'); die(); }
             }else{ header('Location: connexion.php?login_err=email'); die(); }

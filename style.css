@@ -14,11 +14,11 @@ header img{
 }
 header li{
     display: inline-block;
-    padding: 70px 3rem;
+    padding: 70px;
     font-size: 2em;
 
 }
-header a:hover {
+header li:hover {
     background-color: #16F4B2;
     text-decoration:none;
     color: black;
@@ -63,7 +63,8 @@ footer{
     background-color: #f5225c;
     height: 200px;
     padding: 3em 70px;
-    margin:20px
+    margin-top:auto;
+    margin-bottom: auto;
 }
 footer ul{
     text-decoration: none;
@@ -148,4 +149,7 @@ margin-right: auto;
 .redTable tr{
     margin-left: auto;
     margin-right: auto;
+}
+label{
+    font-size: 1.2em;
 }

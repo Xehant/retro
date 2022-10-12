@@ -45,7 +45,7 @@ require 'header.php';
                     <input type="password" name="password" class="form-control" placeholder="Veuilez entrer votre mot de passe" required="required" autocomplete="off">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Connexion</button>
+                    <button type="submit" class="">Connexion</button>
                 </div>   
             </form>
             <p class="text-center"><a href="inscription.php">Pas encore inscrit? Veuillez venir ici</a></p>
