@@ -2,13 +2,13 @@
     // Démarrage de la session 
     session_start();
     // Include de la base de données
-    require_once '../config.php';
+    require_once 'config.php';
 
 
     // Si la session n'existe pas 
-    if(!isset($_SESSION['user']))
+    if(!isset($_SESSION['id']))
     {
-        header('Location:../index.php');
+        header('Location:utilisateur.php');
         die();
     }
 
@@ -21,7 +21,7 @@
         $new_password_retype = htmlspecialchars($_POST['new_password_retype']);
 
         // On récupère les infos de l'utilisateur
-        $check_password  = $bdd->prepare('SELECT password FROM utilisateur WHERE token = :token');
+        $check_password  = $bdd->prepare('SELECT password FROM utilisateur WHERE id = :id');
         $check_password->execute(array(
             "id" => $_SESSION['user']
         ));
@@ -37,23 +37,23 @@
                 $cost = ['cost' => 12];
                 $new_password = password_hash($new_password, PASSWORD_BCRYPT, $cost);
                 // On met à jour la table utiisateurs
-                $update = $bdd->prepare('UPDATE utilisateurs SET password = :password WHERE token = :token');
+                $update = $bdd->prepare('UPDATE utilisateur SET password = :password WHERE token = :token');
                 $update->execute(array(
                     "password" => $new_password,
-                    "token" => $_SESSION['user']
+                    "id" => $_SESSION['id']
                 ));
                 // On redirige
-                header('Location: ../utilisateur.php?err=success_password');
+                header('Location:utilisateur.php?err=success_password');
                 die();
             }
         }
         else{
-            header('Location: ../utilisateur.php?err=current_password');
+            header('Location:utilisateur.php?err=current_password');
             die();
         }
 
     }
     else{
-        header('Location: ../utilisateur.php');
+        header('Location:utilisateur.php');
         die();
     }

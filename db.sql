@@ -3,11 +3,11 @@ CREATE DATABASE retro;
 
 use retro;
 DROP TABLE IF EXISTS Compte;
-CREATE TABLE Compte(ID INT,Client_ID INT, Grade VARCHAR(20));
-DROP TABLE IF EXISTS Client;
-CREATE TABLE Client(ID INT,Nom VARCHAR(20));
+CREATE TABLE Compte(ID INT,Utilisateur_ID INT, Grade VARCHAR(20));
+DROP TABLE IF EXISTS Utilisateur;
+CREATE TABLE Utilisateur(ID INT,Pseudo VARCHAR(20),Email VARCHAR(30),password VARCHAR(100));
 DROP TABLE IF EXISTS Produits;
-CREATE TABLE Produits (ID INT, Compte_ID INT, Nom VARCHAR (20),Quantité VARCHAR(4));
+CREATE TABLE Produits (ID INT, Prix_ID INT, Nom VARCHAR (20),Catégorie VARCHAR(30));
 DROP TABLE IF EXISTS Panier;
 CREATE TABLE Panier(ID INT, Produit_ID INT, Quantité VARCHAR(4));
 DROP TABLE IF EXISTS Prix;
@@ -28,7 +28,7 @@ ALTER TABLE Produits
 ADD PRIMARY KEY (ID);
 ALTER TABLE Panier
 ADD PRIMARY KEY (ID);
-ALTER TABLE Client
+ALTER TABLE Utilisateur
 ADD PRIMARY KEY (ID);
 ALTER TABLE Prix
 ADD PRIMARY KEY (ID);
@@ -42,37 +42,25 @@ ALTER TABLE Commande
 ADD PRIMARY KEY (ID);
 
 
-ALTER TABLE Compte ADD FOREIGN KEY (Client_ID) REFERENCES Client (ID);
-ALTER TABLE Boutique ADD FOREIGN KEY (Ville_ID) REFERENCES Ville (ID);
-ALTER TABLE Prix  ADD FOREIGN KEY(Produit_ID) REFERENCES Produits(ID);
-ALTER TABLE Commande ADD FOREIGN KEY(Panier_ID) REFERENCES Panier(ID);
-ALTER TABLE Commande ADD FOREIGN KEY(Boutique_ID) REFERENCES Boutique(ID);
-ALTER TABLE Recherche ADD FOREIGN KEY(Produit_ID) REFERENCES Produits(ID);
-ALTER TABLE Produits ADD FOREIGN KEY(Compte_ID) REFERENCES Compte(ID);
-ALTER TABLE Panier ADD FOREIGN KEY(Produit_ID) REFERENCES Produits(ID);
-
-
-SELECT * FROM retro
-INNER JOIN Client
-ON Compte.Client_ID=Client.ID;
-SELECT * FROM retro
+SELECT * FROM Compte
+INNER JOIN Utilisateur
+ON Compte.Utilisateur_ID=Utilisateur.ID;
+SELECT * FROM Produits
 INNER JOIN Prix
 ON Prix.Produit_ID=Produits.ID;
-SELECT * FROM retro
+SELECT * FROM Ville
 INNER JOIN Boutique
 ON Boutique.Ville_ID=Ville.ID;
-SELECT * FROM retro
+SELECT * FROM Panier
 INNER JOIN Commande
 ON Commande.Panier_ID=Panier.ID;
-SELECT * FROM retro
+SELECT * FROM Boutique
 INNER JOIN Commande
 ON Commande.Boutique_ID=Boutique.ID;
-SELECT * FROM retro
+SELECT * FROM Produits
 INNER JOIN Recherche
 ON Recherche.Produit_ID=Produits.ID;
-SELECT * FROM retro
-INNER JOIN Produits
-ON Produits.Compte_ID=Compte.ID;
-SELECT * FROM retro
+
+SELECT * FROM Produits
 INNER JOIN Panier
 ON Panier.Produit_ID=Produits.ID;

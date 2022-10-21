@@ -1,25 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-        <link rel="stylesheet" style="style/css" href="style.css">
-        <script src="https://kit.fontawesome.com/84df8c1afa.js" crossorigin="anonymous"></script>
-        <title>Retro Game</title>
-    </head>
-    <body>
-        <header>
-            <a href="index.php"> <img src="pictures/logo2.png" alt="logo2"></a>
-            <ul>
-                <li><a href="index.php">Accueil</a></li>
-                <li><a href="recherche.php">Recherchez</a></li>
-                <li><a href="catalogue.php">  Catalogue</a></li>
-                <li><a href="connexion.php">Se Connecter</a></li>
-                <li><a href="panier.php" ><i class="fa-solid fa-basket-shopping"></i></a></li>
-            </ul>
-        </header>
+<?php
+include 'header.php';
+?>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -93,15 +74,8 @@
                 </li>
             </ul>
         </div>
-        <footer>
-            <a href="http://localhost/Retro/index.php"><img src="pictures/logo1.png" alt="logo1"></a>
-            <ul>
-                <li><a href="https://fr-fr.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
-                <li><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
-                <li><a href="https://youtu.be/dQw4w9WgXcQ">Contactez-nous</a></li>
-            </ul>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<?php
+include 'footer.php'
+?>
     </body>
 </html>

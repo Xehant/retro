@@ -7,7 +7,7 @@ include 'header.php'
 <ul>
     <li><img src="pictures/Slaycation.jpg" alt="Slaycation">
         <p>29,99€</p>
-        <a href="panier.php?action=ajout&amp;l=Slaycation&amp;q=1&amp;p=29"><input type="button" value="Ajouter au panier"></a></li>
+        <a href="panier.php?action=ajout&amp;l=Slaycation&amp;q=1&amp;p=29.99"><input type="button" value="Ajouter au panier"></a></li>
     </a></li>
     <li><img src="pictures/fifa23.jpg" alt="fifa">
         <p>69,99€</p>
@@ -16,7 +16,7 @@ include 'header.php'
     <li><img src="pictures/GOW.jpg" alt="God of War">
     <p>79,99€</p>
     <a href="panier.php?action=ajout&amp;l=God Of War&amp;q=1&amp;p=79"><input type="button" value="Ajouter au panier"></a></li>
-    <li><img src="pictures/Severed.jpg" alt="servered">
+    <li><img src="pictures/Severed.jpg" alt="severed">
     <p>34,99€</p>
     <a href="panier.php?action=ajout&amp;l=Severed&amp;q=1&amp;p=34"><input type="button" value="Ajouter au panier"></a></li>
 </ul>
@@ -24,18 +24,18 @@ include 'header.php'
 <ul>
         <li><img src="pictures/ps5.jpg" alt="PS5">
         <p>549,99€</p>
-        <a href="panier.php?action=ajout&amp;l=Playstation 5&amp;q=1&amp;p=549"><input type="button" value="Ajouter au panier"></a></li>
+        <a href="panier.php?action=ajout&amp;l=Playstation 5&amp;q=1&amp;p=549.99"><input type="button" value="Ajouter au panier"></a></li>
     </a></li>
     <li><img src="pictures/switch.jpg" alt="switch">
         <p>359,99€</p>
-        <a href="panier.php?action=ajout&amp;l=Nintendo Switch&amp;q=1&amp;p=359"><input type="button" value="Ajouter au panier"></a></li>
+        <a href="panier.php?action=ajout&amp;l=Nintendo Switch&amp;q=1&amp;p=359.99"><input type="button" value="Ajouter au panier"></a></li>
     </a></li>
     <li><img src="pictures/xbox.jpg" alt="Serie X">
     <p>499,99€</p>
-    <a href="panier.php?action=ajout&amp;l=Xbox Series X&amp;q=1&amp;p=499"><input type="button" value="Ajouter au panier"></a></li>
+    <a href="panier.php?action=ajout&amp;l=Xbox Series X&amp;q=1&amp;p=499.99"><input type="button" value="Ajouter au panier"></a></li>
     <li><img src="pictures/xboxs.jpg" alt="Serie S">
     <p>379,79€</p>
-        <a href="panier.php?action=ajout&amp;l=Xbox Series S&amp;q=1&amp;p=379"><input type="button" value="Ajouter au panier"></a></li>
+        <a href="panier.php?action=ajout&amp;l=Xbox Series S&amp;q=1&amp;p=379.99"><input type="button" value="Ajouter au panier"></a></li>
         
 </ul>
 <h2>Jeux rétro proposés par des vendeurs</h2>
